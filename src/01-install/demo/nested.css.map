@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACD,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAQ;IACJ,MAAM,EAAE,IAAI;IACZ,WAAW,EAAE,IAAI",
+"sources": ["input.scss"],
+"names": [],
+"file": "nested.css"
+}

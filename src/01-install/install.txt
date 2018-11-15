@@ -1,0 +1,88 @@
+
+sass基于Ruby语言开发而成，因此安装sass前需要安装Ruby。
+    1.安装Ruby语言
+        $ sudo apt-get install ruby-full
+    2.安装sass
+        $ sudo gem install sass
+        $ gem install compass
+
+查看sass是否安装成功：
+    1.命令 
+        $ sass -v
+    2.获取帮助
+        $ sass -h
+    3.更新sass
+        $ gem update sass
+
+使用sass例子：
+    //单文件转换命令
+    $ sass input.scss output.css
+
+    //单文件监听命令
+    $ sass --watch input.scss:output.css
+
+    //如果你有很多的sass文件的目录，你也可以告诉sass监听整个目录：
+    $ sass --watch app/sass:public/stylesheets
+
+    //编译格式
+    $ sass --watch input.scss:output.css --style compact
+
+    //编译添加调试map
+    $ sass --watch input.scss:output.css --sourcemap
+
+    //选择编译格式并添加调试map
+    $ sass --watch input.scss:output.css --style expanded --sourcemap
+
+    //开启debug信息
+    $ sass --watch input.scss:output.css --debug-info
+
+四种编译排版演示;
+    //未编译样式
+        .box {
+            width: 300px;
+            height: 400px;
+            &-title {
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+
+nested 编译排版格式
+    /*命令行内容*/
+    sass style.scss:style.css --style nested
+
+    /*编译过后样式*/
+    .box {
+        width: 300px;
+        height: 400px; }
+    .box-title {
+        height: 30px;
+        line-height: 30px; }
+
+expanded 编译排版格式
+    /*命令行内容*/
+    sass style.scss:style.css --style expanded
+
+    /*编译过后样式*/
+    .box {
+        width: 300px;
+        height: 400px;
+    }
+    .box-title {
+        height: 30px;
+        line-height: 30px;
+    }
+
+compact 编译排版格式
+    /*命令行内容*/
+    sass style.scss:style.css --style compact
+
+    /*编译过后样式*/
+    .box { width: 300px; height: 400px; }
+    .box-title { height: 30px; line-height: 30px; }
+
+compressed 编译排版格式
+    /*命令行内容*/
+    sass style.scss:style.css --style compressed
+    /*编译过后样式*/
+    .box{width:300px;height:400px}.box-title{height:30px;line-height:30px}
